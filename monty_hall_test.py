@@ -10,16 +10,10 @@ def test_monty_hall_problem(number_of_games):
     door_chosen = random.randint(1, 3)
 
     if switch:
-      if prize_door == door_chosen:
-        return False
-      else:
-        return True
+      return prize_door != door_chosen
 
     else:
-      if prize_door == door_chosen:
-        return True
-      else:
-        return False
+      return prize_door == door_chosen
 
   def play_multiple_games(number_of_games):
     ### Plays the game the ammount of times requested and returns the ammount os wins for each strategy 
